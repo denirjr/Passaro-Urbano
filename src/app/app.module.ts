@@ -26,7 +26,9 @@ import { DiversaoComponent } from './diversao/diversao.component';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
