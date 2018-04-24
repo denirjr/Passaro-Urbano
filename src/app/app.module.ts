@@ -40,7 +40,7 @@ import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [ { provide: LOCALE_ID, useValue: 'pt-Br' } ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
