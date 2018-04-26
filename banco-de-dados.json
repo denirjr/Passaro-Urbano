@@ -201,6 +201,18 @@
       "complemento": "tamandua bandeira",
       "formaPagamento": "dinheiro",
       "id": 6
+    },
+    {
+      "endereco": "Rua Donizete",
+      "numero": "12",
+      "complemento": "Ap 2",
+      "id": 7
+    },
+    {
+      "endereco": "Rua Hildebrando",
+      "numero": "12",
+      "complemento": "Casa Fundos",
+      "id": 8
     }
   ]
 }
