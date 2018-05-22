@@ -213,6 +213,20 @@
       "numero": "12",
       "complemento": "Casa Fundos",
       "id": 8
+    },
+    {
+      "endereco": "Rua das Flores",
+      "numero": "125",
+      "complemento": "Bloco B",
+      "formaPagamento": "dinheiro",
+      "id": 9
+    },
+    {
+      "endereco": "Hildebrando",
+      "numero": "12",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 10
     }
   ]
 }
