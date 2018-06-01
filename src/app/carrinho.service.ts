@@ -1,4 +1,5 @@
 import {ItemCarrinhoModel} from './shared/item-carrinho.model';
+import {Oferta} from './shared/oferta.model';
 
 class CarrinhoService {
   public itens: ItemCarrinhoModel[] = [];
@@ -6,6 +7,32 @@ class CarrinhoService {
   public exibirItens(): ItemCarrinhoModel [] {
     return this.itens;
   }
+
+  public incluirItem(oferta: Oferta): void {
+    let itemCarrinho: ItemCarrinhoModel = new ItemCarrinhoModel(
+      oferta.id,
+      oferta.imagens[0],
+      oferta.titulo,
+      oferta.descricao_oferta,
+      oferta.valor,
+      1
+    );
+    let itemCarrinhoEncontrado = this.itens.find((item: ItemCarrinhoModel) => item.id === itemCarrinho.id);
+    if (itemCarrinhoEncontrado) {
+      itemCarrinhoEncontrado.quantidade += 1;
+    } else {
+      this.itens.push(itemCarrinho);
+    }
+  }
+
+  public totalCarrinhoCompras(): number {
+    let total: number = 0
+    this.itens.map((item: ItemCarrinhoModel) => {
+      total = total + (item.valor * item.quantidade)
+    });
+    return total
+  }
+
 }
 
-export default CarrinhoService
+export { CarrinhoService };

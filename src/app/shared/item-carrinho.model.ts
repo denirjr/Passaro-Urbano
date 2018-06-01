@@ -9,4 +9,4 @@ class ItemCarrinhoModel {
   ) {}
 }
 
-export {ItemCarrinhoModel}
+export {ItemCarrinhoModel};
