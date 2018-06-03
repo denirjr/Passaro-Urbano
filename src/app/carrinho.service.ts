@@ -26,11 +26,31 @@ class CarrinhoService {
   }
 
   public totalCarrinhoCompras(): number {
-    let total: number = 0
+    let total = 0;
     this.itens.map((item: ItemCarrinhoModel) => {
-      total = total + (item.valor * item.quantidade)
+      total = total + (item.valor * item.quantidade);
     });
-    return total
+    return total;
+  }
+
+  public adicionarQuantidade (itemCarrinho: ItemCarrinhoModel): void {
+    const itemCarrinhoEncontrado = this.itens.find((item) => item.id === itemCarrinho.id );
+
+    if (itemCarrinhoEncontrado) {
+      itemCarrinhoEncontrado.quantidade += 1;
+    }
+  }
+
+  public diminuirQuantidade(itemCarrinho: ItemCarrinhoModel): void {
+    const itemCarrinhoEncontrado = this.itens.find((item) => item.id === itemCarrinho.id );
+
+    if (itemCarrinhoEncontrado) {
+      itemCarrinhoEncontrado.quantidade -= 1;
+
+      if (itemCarrinhoEncontrado.quantidade === 0) {
+          this.itens.splice(this.itens.indexOf(itemCarrinhoEncontrado), 1);
+      }
+    }
   }
 
 }
