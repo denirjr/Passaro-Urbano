@@ -9,7 +9,7 @@ class CarrinhoService {
   }
 
   public incluirItem(oferta: Oferta): void {
-    let itemCarrinho: ItemCarrinhoModel = new ItemCarrinhoModel(
+    const itemCarrinho: ItemCarrinhoModel = new ItemCarrinhoModel(
       oferta.id,
       oferta.imagens[0],
       oferta.titulo,
@@ -51,6 +51,10 @@ class CarrinhoService {
           this.itens.splice(this.itens.indexOf(itemCarrinhoEncontrado), 1);
       }
     }
+  }
+
+  public limparCarrinho(): void {
+    this.itens = [];
   }
 
 }
