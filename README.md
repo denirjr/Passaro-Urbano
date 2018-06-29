@@ -14,6 +14,14 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+## Json Server 
+
+Run `install` $ npm install -g json-server
+
+Run `Start JSON Server` $ json-server --watch db.json
+ 
+ (in you root project  you need to create a json file)
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
